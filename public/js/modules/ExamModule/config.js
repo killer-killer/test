@@ -1,0 +1,16 @@
+define(['examApp'],function(app){
+	app.config(["$stateProvider",function($stateProvider){
+		$stateProvider.
+		state('root',{
+			url:'',
+			views:{
+				header:{
+					templateUrl:"views/header.html"
+				},
+				footer:{
+					template:"<div>foot</div>"
+				}
+			}
+		})
+	}]);
+});
