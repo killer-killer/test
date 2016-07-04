@@ -16,7 +16,6 @@ require.config({
 
 function start(){
 	require(["angular"],function(angular){
-		console.log(angular);
 		require(['examConfig'],function(ExamConfig){
 			angular.bootstrap(document,['Exam']);
 		})

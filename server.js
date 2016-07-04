@@ -4,10 +4,9 @@ var express=require("express"),
 
 app.use(express.static(path.join(__dirname,'/public/')));
 
-app.get('/',function(req,res){
-	res.sendFile(path.join(__dirname,'/public/index.html'));
-});
+require('./server/config/express')(app);
+require('./server/config/routes').init(app);
 
 app.listen('1111',function(req,res) {
 	console.log("server listening at 1111");
-})
+});
